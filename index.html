@@ -359,7 +359,11 @@
       <p>Fill this out and we'll get back to you within one business day with next steps and a quote.</p>
     </div>
     <div class="contact-card">
-      <form id="quote-form">
+      <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="09c702bd-d6ab-4704-9f24-9f5d28ef69c9">
+        <input type="hidden" name="subject" value="New quote request from WebsitesAmerica.com">
+        <input type="hidden" name="from_name" value="WebsitesAmerica.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <div>
             <label for="name">Your Name</label>
@@ -410,17 +414,31 @@
   }
   document.getElementById('quote-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    var f = e.target;
-    var subject = 'Website Quote Request — ' + (f.business.value || f.name.value);
-    var body =
-      'Name: ' + f.name.value + '\n' +
-      'Business: ' + f.business.value + '\n' +
-      'Email: ' + f.email.value + '\n' +
-      'Phone: ' + f.phone.value + '\n' +
-      'Tier: ' + f.tier.value + '\n\n' +
-      'Project details:\n' + f.message.value;
-    window.location.href = 'mailto:hello@websitesamerica.com?subject=' +
-      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          form.innerHTML = '<div style="text-align:center; padding:30px 10px;">' +
+            '<div style="font-size:2.5rem; margin-bottom:12px;">✅</div>' +
+            '<h3 style="margin-bottom:8px;">Request sent!</h3>' +
+            '<p style="color:var(--muted);">Thanks for reaching out — we\'ll get back to you within one business day.</p>' +
+            '</div>';
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send My Request →';
+        alert('Something went wrong sending your request. Please email us directly at hello@websitesamerica.com');
+      });
   });
 </script>
 
