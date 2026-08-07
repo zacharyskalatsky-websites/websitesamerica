@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Websites America — Professional Website Design &amp; Development</title>
+<meta name="description" content="Websites America builds fast, modern, affordable websites for American businesses. Three simple tiers — Launch, Growth, and Premium. Get a quote today.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇺🇸</text></svg>">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-2: #16294f;
+    --blue: #1e5eff;
+    --blue-dark: #1548c7;
+    --red: #d92d3a;
+    --ink: #1a2233;
+    --muted: #5b6b85;
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --line: #e3e9f2;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(15, 31, 61, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { font-weight: 800; font-size: 1.25rem; color: var(--navy); text-decoration: none; letter-spacing: -0.02em; }
+  .logo span { color: var(--blue); }
+  .logo .flag { color: var(--red); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--navy); }
+  .btn {
+    display: inline-block; padding: 12px 26px; border-radius: 10px;
+    font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer;
+    border: none; transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 6px 18px rgba(30,94,255,.3); }
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
+  .btn-ghost:hover { border-color: #fff; }
+  .nav .btn { padding: 9px 20px; font-size: 0.9rem; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, #1c3a75 100%);
+    color: #fff; padding: 96px 0 110px; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(600px 300px at 15% 10%, rgba(30,94,255,.25), transparent 60%),
+      radial-gradient(500px 260px at 85% 90%, rgba(217,45,58,.18), transparent 60%);
+    pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-block; padding: 6px 16px; border-radius: 999px;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+    font-size: 0.85rem; font-weight: 600; letter-spacing: .04em; margin-bottom: 22px;
+  }
+  .eyebrow .dot-red { color: #ff6b76; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 18px; font-weight: 800; }
+  h1 .accent { color: #7ea4ff; }
+  .hero p.sub { font-size: 1.2rem; color: #c6d2e8; max-width: 640px; margin: 0 auto 34px; }
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .hero-stats { display: flex; gap: 40px; justify-content: center; margin-top: 56px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat b { display: block; font-size: 1.6rem; font-weight: 800; }
+  .stat span { color: #9fb0cc; font-size: .9rem; }
+
+  /* Sections */
+  section { padding: 84px 0; }
+  .section-head { text-align: center; max-width: 620px; margin: 0 auto 52px; }
+  .section-head .kicker { color: var(--blue); font-weight: 700; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
+  .section-head h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); letter-spacing: -0.02em; margin: 10px 0 12px; }
+  .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+  /* Services */
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+  .feature {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px; box-shadow: var(--shadow);
+  }
+  .feature .icon {
+    width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; background: #e9efff; margin-bottom: 16px;
+  }
+  .feature h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .feature p { color: var(--muted); font-size: .95rem; }
+
+  /* Pricing */
+  #pricing { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; align-items: stretch; }
+  .tier {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 34px 30px; display: flex; flex-direction: column; position: relative;
+    box-shadow: var(--shadow);
+  }
+  .tier.popular { border: 2px solid var(--blue); box-shadow: 0 16px 40px rgba(30,94,255,.15); }
+  .badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--blue); color: #fff; font-size: .78rem; font-weight: 700;
+    padding: 5px 16px; border-radius: 999px; letter-spacing: .03em; white-space: nowrap;
+  }
+  .tier h3 { font-size: 1.25rem; margin-bottom: 4px; }
+  .tier .tagline { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+  .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.02em; }
+  .price small { font-size: 1rem; font-weight: 500; color: var(--muted); }
+  .price-note { color: var(--muted); font-size: .85rem; margin-bottom: 22px; }
+  .tier ul { list-style: none; margin-bottom: 28px; flex: 1; }
+  .tier li { padding: 7px 0; font-size: .95rem; color: var(--ink); display: flex; gap: 10px; align-items: flex-start; }
+  .tier li::before { content: "✓"; color: var(--blue); font-weight: 800; flex-shrink: 0; }
+  .tier li.dim { color: #a6b2c6; }
+  .tier li.dim::before { content: "—"; color: #cad3e0; }
+  .tier .btn { text-align: center; }
+  .tier-outline { background: transparent; color: var(--blue); border: 1.5px solid var(--blue); }
+  .tier-outline:hover { background: #e9efff; }
+
+  /* Process */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; counter-reset: step; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
+  .step .num {
+    width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 14px;
+  }
+  .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .step p { color: var(--muted); font-size: .92rem; }
+
+  /* Contact */
+  #contact { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; }
+  #contact .section-head h2, #contact .section-head .kicker { color: #fff; }
+  #contact .section-head .kicker { color: #7ea4ff; }
+  #contact .section-head p { color: #c6d2e8; }
+  .contact-card {
+    max-width: 640px; margin: 0 auto; background: #fff; border-radius: var(--radius);
+    padding: 40px; color: var(--ink); box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { font-size: .88rem; font-weight: 600; display: block; margin-bottom: 6px; }
+  input, select, textarea {
+    width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px;
+    font-size: 1rem; font-family: inherit; margin-bottom: 18px; background: #fff; color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--blue); }
+  textarea { resize: vertical; min-height: 110px; }
+  .contact-card .btn { width: 100%; font-size: 1.05rem; padding: 14px; }
+  .form-note { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 14px; }
+  .form-note a { color: var(--blue); }
+
+  /* Footer */
+  footer { background: var(--navy); color: #9fb0cc; padding: 36px 0; font-size: .9rem; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: #c6d2e8; text-decoration: none; }
+  footer a:hover { color: #fff; }
+
+  @media (max-width: 640px) {
+    .nav-links a:not(.btn) { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    section { padding: 60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">Websites<span>America</span><span class="flag">.com</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">How It Works</a>
+      <a class="btn btn-primary" href="#contact">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">🇺🇸 <span class="dot-red">American-built</span> websites for American businesses</div>
+    <h1>Your business deserves a website<br>that <span class="accent">actually works.</span></h1>
+    <p class="sub">Fast, modern, mobile-ready websites built for small businesses across America. Simple pricing, no agency runaround, live in as little as two weeks.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#pricing">See Pricing</a>
+      <a class="btn btn-ghost" href="#contact">Tell Us About Your Project</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>2 weeks</b><span>typical launch time</span></div>
+      <div class="stat"><b>100%</b><span>mobile-friendly</span></div>
+      <div class="stat"><b>Flat-rate</b><span>transparent pricing</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">What We Do</span>
+      <h2>Everything your business needs online</h2>
+      <p>From a simple landing page to a full e-commerce store — we design, build, and launch it for you.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature">
+        <div class="icon">🎨</div>
+        <h3>Custom Design</h3>
+        <p>No cookie-cutter templates. Every site is designed around your brand, your customers, and your goals.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📱</div>
+        <h3>Mobile-First Build</h3>
+        <p>Over half your visitors are on their phone. Your site will look sharp and load fast on every device.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔍</div>
+        <h3>SEO Foundations</h3>
+        <p>Built to be found — clean structure, fast load times, and on-page SEO so Google takes you seriously.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛒</div>
+        <h3>E-Commerce</h3>
+        <p>Sell products or take bookings online with secure checkout and simple order management.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">✍️</div>
+        <h3>Copy &amp; Content</h3>
+        <p>Don't have the words? We'll write clear, persuasive copy that turns visitors into customers.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛠️</div>
+        <h3>Care &amp; Maintenance</h3>
+        <p>Updates, backups, security, and edits handled for you — so your site never goes stale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Simple Pricing</span>
+      <h2>Three tiers. No surprises.</h2>
+      <p>Flat-rate project pricing. Pick the tier that fits — every site includes hosting setup, mobile design, and launch support.</p>
+    </div>
+    <div class="tiers">
+
+      <div class="tier">
+        <h3>Launch</h3>
+        <p class="tagline">For new businesses that need a professional presence, fast.</p>
+        <div class="price">$499</div>
+        <p class="price-note">one-time · typical launch in 1–2 weeks</p>
+        <ul>
+          <li>Up to 3 pages (Home, About, Contact)</li>
+          <li>Custom design on a proven layout</li>
+          <li>Mobile-friendly &amp; fast-loading</li>
+          <li>Contact form &amp; click-to-call</li>
+          <li>Google Business Profile setup</li>
+          <li>Basic on-page SEO</li>
+          <li class="dim">Blog / content pages</li>
+          <li class="dim">E-commerce</li>
+        </ul>
+        <a class="btn tier-outline" href="#contact" onclick="pickTier('Launch')">Start with Launch</a>
+      </div>
+
+      <div class="tier popular">
+        <span class="badge">MOST POPULAR</span>
+        <h3>Growth</h3>
+        <p class="tagline">For established businesses ready to win more customers online.</p>
+        <div class="price">$1,499</div>
+        <p class="price-note">one-time · typical launch in 2–3 weeks</p>
+        <ul>
+          <li>Up to 8 pages, fully custom design</li>
+          <li>Professional copywriting included</li>
+          <li>Blog or news section</li>
+          <li>Advanced on-page SEO &amp; analytics</li>
+          <li>Lead capture forms &amp; email signup</li>
+          <li>Photo gallery / portfolio</li>
+          <li>30 days of post-launch support</li>
+          <li class="dim">E-commerce</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact" onclick="pickTier('Growth')">Start with Growth</a>
+      </div>
+
+      <div class="tier">
+        <h3>Premium</h3>
+        <p class="tagline">For businesses that need e-commerce, bookings, or something custom.</p>
+        <div class="price">$2,999<small>+</small></div>
+        <p class="price-note">quoted per project · timeline varies</p>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Unlimited pages</li>
+          <li>Full e-commerce or online booking</li>
+          <li>Payment processing setup</li>
+          <li>Custom features &amp; integrations</li>
+          <li>Priority build queue</li>
+          <li>90 days of post-launch support</li>
+          <li>Dedicated project manager</li>
+        </ul>
+        <a class="btn tier-outline" href="#contact" onclick="pickTier('Premium')">Request a Quote</a>
+      </div>
+
+    </div>
+    <p style="text-align:center; color:var(--muted); margin-top:34px; font-size:.95rem;">
+      Need ongoing help? Add a <b>Care Plan</b> from <b>$49/mo</b> — hosting, updates, backups, and monthly edits handled for you.
+    </p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">How It Works</span>
+      <h2>From idea to live in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Tell us your goals</h3>
+        <p>Fill out the form below. We'll schedule a quick call to learn about your business and what you need.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Get your plan</h3>
+        <p>You'll receive a clear proposal — flat price, timeline, and exactly what's included. No surprises.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>We build it</h3>
+        <p>Our team designs and builds your site, checking in with you at every milestone for feedback.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Launch &amp; grow</h3>
+        <p>We put your site live, connect your domain, and stick around to make sure everything runs smoothly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Get Started</span>
+      <h2>Tell us about your project</h2>
+      <p>Fill this out and we'll get back to you within one business day with next steps and a quote.</p>
+    </div>
+    <div class="contact-card">
+      <form id="quote-form">
+        <div class="form-row">
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+          </div>
+          <div>
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business" placeholder="Smith's Bakery">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        <label for="tier">Which tier are you interested in?</label>
+        <select id="tier" name="tier">
+          <option value="Not sure yet">Not sure yet — help me choose</option>
+          <option value="Launch">Launch — $499</option>
+          <option value="Growth">Growth — $1,499</option>
+          <option value="Premium">Premium — $2,999+</option>
+        </select>
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" name="message" placeholder="What does your business do? What do you want your website to accomplish?"></textarea>
+        <button type="submit" class="btn btn-primary">Send My Request →</button>
+        <p class="form-note">Prefer email? Reach us at <a href="mailto:hello@websitesamerica.com">hello@websitesamerica.com</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 WebsitesAmerica.com — Built in the USA 🇺🇸</div>
+    <div><a href="#pricing">Pricing</a> · <a href="#contact">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+  function pickTier(tier) {
+    var sel = document.getElementById('tier');
+    if (sel) sel.value = tier;
+  }
+  document.getElementById('quote-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target;
+    var subject = 'Website Quote Request — ' + (f.business.value || f.name.value);
+    var body =
+      'Name: ' + f.name.value + '\n' +
+      'Business: ' + f.business.value + '\n' +
+      'Email: ' + f.email.value + '\n' +
+      'Phone: ' + f.phone.value + '\n' +
+      'Tier: ' + f.tier.value + '\n\n' +
+      'Project details:\n' + f.message.value;
+    window.location.href = 'mailto:hello@websitesamerica.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+
+</body>
+</html>
