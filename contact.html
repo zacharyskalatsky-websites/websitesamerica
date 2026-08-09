@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get a Quote — Websites America</title>
 <meta name="description" content="Tell us about your project and get a website quote within one business day. Flat-rate pricing, live in 5–7 days, 24-hour rush available.">
+<link rel="canonical" href="https://websitesamerica.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://websitesamerica.com/contact">
+<meta property="og:title" content="Get a Quote — Websites America">
+<meta property="og:description" content="Tell us about your project and get a website quote within one business day. Flat-rate pricing, live in 5–7 days, 24-hour rush available.">
+<meta property="og:site_name" content="Websites America">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Get a Quote — Websites America">
+<meta name="twitter:description" content="Tell us about your project and get a website quote within one business day. Flat-rate pricing, live in 5–7 days, 24-hour rush available.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇺🇸</text></svg>">
 <link rel="stylesheet" href="styles.css">
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="+0Yy4zuPJbKl4zvz8PZYuQ" async></script>
@@ -78,7 +88,7 @@
         <label for="message">Tell us about your project</label>
         <textarea id="message" name="message" placeholder="What does your business do? What do you want your website to accomplish?"></textarea>
         <button type="submit" class="btn btn-primary">Send My Request →</button>
-        <p class="form-note">Prefer email? Reach us at <a href="mailto:hello@websitesamerica.com">hello@websitesamerica.com</a></p>
+        <p class="form-note">Prefer email? Reach us at <a href="#" id="email-link">our inbox</a></p>
       </form>
     </div>
   </div>
@@ -93,6 +103,10 @@
 
 <script>
   (function () {
+    var addr = 'hello' + '@' + 'websitesamerica.com';
+    var el = document.getElementById('email-link');
+    el.textContent = addr;
+    el.href = 'mailto:' + addr;
     var tierParam = new URLSearchParams(window.location.search).get('tier');
     if (tierParam) {
       var sel = document.getElementById('tier');
