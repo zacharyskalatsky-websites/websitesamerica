@@ -1,0 +1,5 @@
+
+# Environment files (ZV1 Security Standard §3)
+.env
+.env.*
+!.env.example
