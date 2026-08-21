@@ -78,16 +78,17 @@
     <hr>
 
     <h2>How the pricing works</h2>
-    <p>One complete program, three phases:</p>
+    <p>Three tiers:</p>
     <ul>
-      <li><b>Build &amp; Launch — $5,000 one-time.</b> Professional website, domain, DNS &amp; SSL, hosting, Google Business Profile, full SEO foundation, analytics, and a trackable phone number. Live in about 7 days once we have your materials.</li>
-      <li><b>Infrastructure &amp; Security Reserve — $1,000 first year.</b> Covers hosting, SSL, backups, monitoring, and maintenance. Unused funds roll forward, and future contributions are expected to decrease once the site is established.</li>
-      <li><b>SEO &amp; Digital Growth — $1,250/month.</b> Five original SEO articles a month, keyword and technical monitoring, and a monthly report with recommendations. Three-month initial commitment, then month-to-month with 30 days' notice.</li>
+      <li><b>Tier 1: Foundation — $10,000 one-time.</b> Professional website, domain, DNS &amp; SSL, hosting, Google Business Profile, full SEO foundation, analytics, and a trackable phone number. Live in about 7 days once we have your materials. Includes a $2,000 first-year infrastructure &amp; security reserve — unused funds roll forward.</li>
+      <li><b>Tier 2: Growth — $2,500/month.</b> Five original SEO articles a month, keyword and technical monitoring, and a monthly report with recommendations. Three-month initial commitment, then month-to-month with 30 days' notice.</li>
+      <li><b>Tier 3: Market Authority — $5,000/month.</b> Everything in Growth, plus a full competitive market intelligence brief, ten articles a month across strategic content clusters, new service and geo pages, digital PR, and a quarterly strategy roadmap. For businesses that want to own their category.</li>
     </ul>
-    <p>Payment is split: $2,500 on approval, $2,500 at launch, and the $1,000 reserve at launch. Monthly growth is billed in advance.</p>
+    <p>Payment is split: $5,000 on approval, $5,000 at launch, and the $2,000 reserve at launch. Monthly tiers are billed in advance.</p>
+    <p><b>U.S. veterans get 15% off every tier</b> — build, reserve, and every month. Just mention your service. 🇺🇸</p>
     <p>No hourly billing. No scope creep. The price we quote is the price you pay.</p>
 
-    <h2>Why one program instead of tiers</h2>
+    <h2>Why the foundation comes first</h2>
     <p>A website that launches without SEO, analytics, and a Google presence is a brochure nobody finds. We build the whole foundation at once — correctly, from day one — because that's what actually competes for searches. Full details are on the <a href="/pricing">pricing page</a>.</p>
 
     <hr>
@@ -112,20 +113,20 @@
 
     var label, price, monthly, note, tier;
     if (isNew) {
-      var upfront = 5000 + 1000;
-      label = seo ? 'Full Program — Build & Launch + SEO Growth' : 'Build & Launch + first-year reserve';
+      var upfront = 10000 + 2000;
+      label = seo ? 'Foundation + Growth' : 'Foundation + first-year reserve';
       price = '$' + upfront.toLocaleString();
-      monthly = seo ? '+ $1,250/mo SEO & Digital Growth (3-month initial commitment)' : 'No monthly growth selected — you can add it any time';
+      monthly = seo ? '+ $2,500/mo Growth (3-month initial commitment)' : 'No monthly growth selected — you can add it any time';
       note = seo
-        ? '$5,000 build ($2,500 on approval, $2,500 at launch) + $1,000 infrastructure reserve. Live in about 7 days, then we grow your visibility every month.'
-        : '$5,000 build ($2,500 on approval, $2,500 at launch) + $1,000 infrastructure reserve. Live in about 7 days.';
-      tier = seo ? 'Full Program' : 'Build & Launch';
+        ? '$10,000 build ($5,000 on approval, $5,000 at launch) + $2,000 infrastructure reserve. Live in about 7 days, then we grow your visibility every month. U.S. veterans: 15% off everything.'
+        : '$10,000 build ($5,000 on approval, $5,000 at launch) + $2,000 infrastructure reserve. Live in about 7 days. U.S. veterans: 15% off everything.';
+      tier = seo ? 'Growth' : 'Foundation';
     } else {
-      label = 'SEO & Digital Growth';
-      price = '$1,250/mo';
+      label = 'Growth — SEO & Digital Growth';
+      price = '$2,500/mo';
       monthly = '5 original SEO articles/month + monitoring, optimization & reporting';
-      note = 'Three-month initial commitment, then month-to-month with 30 days\' notice. We start with a review of your existing site and search data.';
-      tier = 'SEO & Digital Growth';
+      note = 'Three-month initial commitment, then month-to-month with 30 days\' notice. We start with a review of your existing site and search data. U.S. veterans: 15% off everything.';
+      tier = 'Growth';
     }
 
     document.getElementById('r-tier').textContent = label;
