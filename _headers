@@ -14,9 +14,10 @@
 
 /assets/*
   Cache-Control: public, max-age=604800
+# CSS/JS are unversioned filenames, so keep the edge TTL short or deploys serve stale code for a day.
 /styles.css
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=3600
 /js/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=3600
 /og-image.jpg
   Cache-Control: public, max-age=604800
