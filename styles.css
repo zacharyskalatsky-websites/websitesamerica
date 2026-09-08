@@ -165,20 +165,16 @@ a.chip:hover { background: #eef1f9; }
 .tier ul { list-style: none; margin-bottom: 28px; flex: 1; }
 .tier li { padding: 7px 0; font-size: .95rem; color: var(--ink); display: flex; gap: 10px; align-items: flex-start; }
 .tier li::before { content: "✓"; color: var(--blue); font-weight: 800; flex-shrink: 0; }
-.tier li.dim { color: #a3adbf; }
-.tier li.dim::before { content: "—"; color: #c6cdd9; }
 .tier .btn { text-align: center; }
-.tier-outline { background: transparent; color: var(--red); border: 1.5px solid var(--red); }
-.tier-outline:hover { background: #f9ecec; }
 
-/* Rush banner */
-.rush-banner {
+/* Note banner */
+.note-banner {
   max-width: 820px; margin: 36px auto 0;
   background: linear-gradient(135deg, #fdf8ec, #fbf1ef);
   border: 1px solid #ecdcc2; border-radius: var(--radius);
   padding: 24px 30px; text-align: center;
 }
-.rush-banner p { font-size: 1.05rem; }
+.note-banner p { font-size: 1.05rem; }
 
 /* Process steps */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
@@ -218,8 +214,6 @@ textarea { resize: vertical; min-height: 110px; }
 .contact-card .btn { width: 100%; font-size: 1.05rem; padding: 14px; }
 .form-note { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 14px; }
 .form-note a { color: var(--blue); }
-.check-label { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; font-weight: 500; cursor: pointer; }
-.check-label input { width: auto; margin: 0; accent-color: var(--red); }
 
 /* Includes panel */
 .includes-panel {
