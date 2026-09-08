@@ -1,11 +1,4 @@
 (function () {
-  var addr = 'hello' + '@' + 'websitesamerica.com';
-  var el = document.getElementById('email-link');
-  if (el) {
-    el.textContent = addr;
-    el.href = 'mailto:' + addr;
-  }
-
   var tierParam = new URLSearchParams(window.location.search).get('tier');
   var sel = document.getElementById('tier');
   if (tierParam && sel) {
@@ -40,7 +33,7 @@
       .catch(function () {
         btn.disabled = false;
         btn.textContent = 'Send My Request →';
-        alert('Something went wrong sending your request. Please email us directly at ' + addr);
+        alert('Something went wrong sending your request. Please try again in a moment.');
       });
   });
 })();
