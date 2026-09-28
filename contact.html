@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get a Quote — Websites America</title>
+<title>Get a Website Quote — Websites America</title>
 <meta name="description" content="Tell us about your business and get a full proposal within one business day. Website, Google presence, SEO, and analytics — live in about 7 days.">
 <link rel="canonical" href="https://websitesamerica.com/contact">
 <meta property="og:type" content="website">
@@ -25,6 +25,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="+0Yy4zuPJbKl4zvz8PZYuQ" async></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Get a Website Quote",
+  "url": "https://websitesamerica.com/contact",
+  "about": {
+    "@id": "https://websitesamerica.com/#organization"
+  },
+  "breadcrumb": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://websitesamerica.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://websitesamerica.com/contact"
+      }
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
@@ -40,6 +69,8 @@
     </nav>
   </div>
 </header>
+
+<main id="main">
 
 <section class="contact-section">
   <div class="container">
@@ -57,21 +88,21 @@
         <div class="form-row">
           <div>
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Smith">
           </div>
           <div>
             <label for="business">Business Name</label>
-            <input type="text" id="business" name="business" placeholder="Smith's Bakery">
+            <input type="text" id="business" name="business" autocomplete="organization" placeholder="Smith's Bakery">
           </div>
         </div>
         <div class="form-row">
           <div>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="jane@example.com">
           </div>
           <div>
             <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567">
           </div>
         </div>
         <label for="tier">What are you interested in?</label>
@@ -88,9 +119,12 @@
         <button type="submit" class="btn btn-primary">Send My Request →</button>
         <p class="form-note">We use what you send only to respond to your request. Submissions are delivered through Web3Forms. See our <a href="/privacy">Privacy Policy</a>.</p>
       </form>
+      <p id="form-status" class="form-note" role="status" aria-live="polite"></p>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container footer-inner">
@@ -102,7 +136,7 @@
   </div>
 </footer>
 
-<script src="/js/contact.js?v=2" defer></script>
+<script src="/js/contact.js?v=3" defer></script>
 
 </body>
 </html>

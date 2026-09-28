@@ -30,19 +30,22 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Websites America",
+  "@id": "https://websitesamerica.com/#organization",
   "url": "https://websitesamerica.com/",
-  "logo": "https://websitesamerica.com/og-image.jpg",
+  "logo": {"@type": "ImageObject", "url": "https://websitesamerica.com/assets/logo.png", "width": 512, "height": 512},
+  "image": "https://websitesamerica.com/og-image.jpg",
   "description": "Websites America builds complete digital foundations for American businesses — website, Google Business Profile, SEO, analytics, and call tracking — then grows their search visibility every month.",
-  "areaServed": "US",
-  "sameAs": []
+  "areaServed": "US"
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://websitesamerica.com/#website",
   "name": "Websites America",
-  "url": "https://websitesamerica.com/"
+  "url": "https://websitesamerica.com/",
+  "publisher": {"@id": "https://websitesamerica.com/#organization"}
 }
 </script>
 </head>
@@ -61,16 +64,18 @@
   </div>
 </header>
 
+<main id="main">
+
 <section class="hero">
   <div class="container">
     <div class="eyebrow">🇺🇸 <span class="dot-red">American-built</span> websites for American businesses</div>
-    <h1>More than a website.<br>A <span class="accent">complete digital foundation.</span></h1>
+    <h1>More than website design.<br>A <span class="accent">complete digital foundation.</span></h1>
     <p class="sub">Website, Google Business Profile, SEO, analytics, and call tracking — built right from day one, live in about 7 days, then improved every single month.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="/pricing">See the Tiers</a>
       <a class="btn btn-ghost" href="/contact">Tell Us About Your Business</a>
     </div>
-    <p style="margin-top:16px; font-weight:600;">🇺🇸 U.S. veterans save 15% on everything — <a href="/pricing#veterans" style="color:var(--blue);">see the veteran discount</a></p>
+    <p style="margin-top:16px; font-weight:600;">🇺🇸 U.S. veterans save 15% on everything — <a href="/pricing#veterans" style="color:var(--blue);">see the veteran discount</a> · <a href="/learn/website-cost-calculator" style="color:var(--blue);">estimate your investment in two questions</a></p>
     <div class="hero-stats">
       <div class="stat"><b>~7 days</b><span>from materials to launch</span></div>
       <div class="stat"><b>5 articles</b><span>a month on the Growth tier</span></div>
@@ -168,7 +173,7 @@
     </div>
     <div class="work-grid">
       <div class="work-card">
-        <img src="assets/detoxnj.jpg?v=2" alt="DetoxNJ.com — medical detox guide for New Jersey" loading="lazy">
+        <img src="assets/detoxnj.jpg?v=2" width="900" height="562" alt="DetoxNJ.com — medical detox guide for New Jersey" loading="lazy">
         <div class="work-body">
           <h3>DetoxNJ.com</h3>
           <p>Medical detox guide for New Jersey — evidence-based resources, an AI treatment guide, and a confidential intake path for families in crisis. Published by our own behavioral-health group, with affiliations disclosed on the site.</p>
@@ -181,7 +186,7 @@
         </div>
       </div>
       <div class="work-card">
-        <img src="assets/psychmentalhealth.jpg?v=2" alt="PsychMentalHealth.com — mental health care guide for New Jersey" loading="lazy">
+        <img src="assets/psychmentalhealth.jpg?v=2" width="900" height="562" alt="PsychMentalHealth.com — mental health care guide for New Jersey" loading="lazy">
         <div class="work-body">
           <h3>PsychMentalHealth.com</h3>
           <p>A free guide to mental health care in New Jersey — resource library, local provider directory, and crisis pathways, built stigma-free.</p>
@@ -194,7 +199,7 @@
         </div>
       </div>
       <div class="work-card">
-        <img src="assets/mentalhealthtreatment.jpg?v=2" alt="MentalHealthTreatment.ai — treatment education platform" loading="lazy">
+        <img src="assets/mentalhealthtreatment.jpg?v=2" width="900" height="562" alt="MentalHealthTreatment.ai — treatment education platform" loading="lazy">
         <div class="work-body">
           <h3>MentalHealthTreatment.ai</h3>
           <p>Treatment education platform explaining levels of care in plain English, with an interactive level-of-care assessment that guides visitors to the right next step.</p>
@@ -251,6 +256,8 @@
     <a class="btn btn-primary" href="/contact">Get Started</a>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container footer-inner">
