@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking Pixels on Behavioral Health Websites: HIPAA Risk | Websites America</title>
+<meta name="description" content="Meta Pixel, Google Analytics and HIPAA on addiction treatment and therapy websites: what HHS, the courts and the FTC have said, where data leaks, and a checklist.">
+<link rel="canonical" href="https://websitesamerica.com/learn/hipaa-tracking-pixels-behavioral-health-websites">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://websitesamerica.com/learn/hipaa-tracking-pixels-behavioral-health-websites">
+<meta property="og:title" content="Tracking Pixels on Behavioral Health Websites: HIPAA Risk | Websites America">
+<meta property="og:description" content="Meta Pixel, Google Analytics and HIPAA on addiction treatment and therapy websites: what HHS, the courts and the FTC have said, where data leaks, and a checklist.">
+<meta property="og:image" content="https://websitesamerica.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Websites America">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://websitesamerica.com/og-image.jpg">
+<meta name="twitter:title" content="Tracking Pixels on Behavioral Health Websites: HIPAA Risk | Websites America">
+<meta name="twitter:description" content="Meta Pixel, Google Analytics and HIPAA on addiction treatment and therapy websites: what HHS, the courts and the FTC have said, where data leaks, and a checklist.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇺🇸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="+0Yy4zuPJbKl4zvz8PZYuQ" async></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tracking Pixels on Behavioral Health Websites: The HIPAA and Privacy Risk",
+  "description": "Meta Pixel, Google Analytics and HIPAA on addiction treatment and therapy websites: what HHS, the courts and the FTC have said, where data leaks, and a checklist.",
+  "author": {"@type": "Organization", "@id": "https://websitesamerica.com/#organization", "name": "Websites America", "url": "https://websitesamerica.com/"},
+  "publisher": {"@type": "Organization", "@id": "https://websitesamerica.com/#organization", "name": "Websites America", "url": "https://websitesamerica.com/", "logo": {"@type": "ImageObject", "url": "https://websitesamerica.com/assets/logo.png", "width": 512, "height": 512}},
+  "image": "https://websitesamerica.com/og-image.jpg",
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "mainEntityOfPage": "https://websitesamerica.com/learn/hipaa-tracking-pixels-behavioral-health-websites"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://websitesamerica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn",
+      "item": "https://websitesamerica.com/learn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tracking Pixels on Behavioral Health Websites: The HIPAA and Privacy Risk",
+      "item": "https://websitesamerica.com/learn/hipaa-tracking-pixels-behavioral-health-websites"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Meta Pixel HIPAA compliant on a healthcare website?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Not by default. HHS says a vendor that receives protected health information needs a business associate agreement or the patient's HIPAA authorization, and a cookie banner is not an authorization. If a pixel fires on intake, insurance, booking or thank-you pages, assume it may be receiving PHI."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can a therapy practice use Google Analytics?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Only with care. Google says it does not offer business associate agreements for Google Analytics and that HIPAA-regulated customers may only use it on pages that are not HIPAA-covered. Keep it off forms, booking flows, portals and pages tied to a visitor's own care."}
+    },
+    {
+      "@type": "Question",
+      "name": "Did the 2024 court ruling make tracking pixels legal for healthcare websites?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The court vacated one piece of the HHS guidance: that an IP address plus a visit to a public page about a condition or provider is enough to trigger HIPAA. The rest of the guidance, including portals, appointment and symptom forms, and business associate agreements, was left in place."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does 42 CFR Part 2 apply to an addiction treatment website?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It can apply to the records the site collects. Part 2 protects records that identify a patient of a federally assisted substance use disorder program, and its definition of patient includes anyone who has applied for diagnosis, treatment or referral at the program. We found no federal guidance applying Part 2 to pixels specifically, so as a precaution, treat intake data as Part 2 data."}
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check what my website sends to Meta or Google?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Open the site in a private browser window, open the developer tools Network tab, and filter for facebook, google, tiktok and similar domains. Then fill out your own forms with fake data and read what each request contains."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">Websites<span>America</span><span class="flag">.com</span></a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/healthcare">Healthcare</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/learn/" class="active">Learn</a>
+      <a class="btn btn-primary" href="/contact">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Tracking Pixels on Behavioral Health Websites: The HIPAA and Privacy Risk</h1>
+    <p class="article-meta">By Websites America · October 4, 2026 · 10 min read</p>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <article class="article-body">
+
+    <p>A treatment program starts running ads, the ads need conversion data, and someone pastes a Meta Pixel and a Google tag into the site header. Many tracking problems on behavioral health sites start that way, as a marketing default that nobody ever reviewed as a decision about patient data.</p>
+    <p>On a hardware store website, a pixel reports that a visitor looked at drills. On an addiction treatment website, the same pixel can report that a visitor read the opioid detox page, opened the insurance verification form and tapped "Call admissions." On a behavioral health site, the pages a person reads and the forms they open can reveal what care they are looking for, so the default marketing setup is the wrong setup.</p>
+    <p>This is general information, not legal advice. Confirm your obligations with a healthcare privacy attorney.</p>
+
+    <h2>What is a tracking pixel, and why does it matter more here?</h2>
+    <p>A tracking pixel is third-party code that reports what a visitor does on your site back to the company that wrote it. The HHS Office for Civil Rights (OCR) groups pixels with cookies, session replay scripts and fingerprinting scripts under one label: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-online-tracking/index.html" target="_blank" rel="noopener">online tracking technologies</a>.</p>
+    <p>The report usually includes the page URL, the button clicked and an identifier such as an IP address or cookie. Some setups add form values, hashed email addresses or custom event names.</p>
+    <p>A URL like <code>/alcohol-detox/verify-insurance</code> says more than most form fields. OCR's bulletin warns that these disclosures can reveal diagnoses and how often a person sees a therapist.</p>
+
+    <h2>What did HHS say about tracking technologies in 2022 and 2024?</h2>
+    <p>HHS said HIPAA applies when a tracking tool sends protected health information (PHI) to a vendor, and that the vendor then needs a business associate agreement (BAA) or the patient's written authorization. OCR issued the bulletin in December 2022 and revised it on March 18, 2024, as the <a href="https://www.aha.org/system/files/media/file/2024/06/opinion-order-in-aha-et-al-v-xavier-becerra-et-al-6-20-2024.pdf" target="_blank" rel="noopener">federal court's opinion</a> lays out.</p>
+    <p>The points that matter most are still on the <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-online-tracking/index.html" target="_blank" rel="noopener">HHS page</a> today:</p>
+    <ul>
+      <li>Tracking on logged-in pages, such as patient portals and telehealth platforms, generally has access to PHI.</li>
+      <li>Public pages where someone books an appointment or enters symptoms may send PHI, including the reason for seeking care.</li>
+      <li>A vendor that receives PHI on your behalf is a business associate, and a BAA is required.</li>
+      <li>Listing the vendor in your privacy policy does not permit the disclosure.</li>
+      <li>A cookie banner is not a valid HIPAA authorization.</li>
+      <li>An impermissible disclosure to a tracking vendor is presumed to be a breach unless you can show a low probability of compromise.</li>
+    </ul>
+    <p>HIPAA reaches a provider that sends health information electronically in connection with standard transactions, such as insurance claims. If your program bills insurance, assume HIPAA applies and confirm it with counsel.</p>
+
+    <h2>What did the court vacate in American Hospital Association v. Becerra?</h2>
+    <p>The court vacated one narrow piece: the position that HIPAA is triggered when a tracking tool connects an IP address with a visit to a public page about specific health conditions or providers. On June 20, 2024, the U.S. District Court for the Northern District of Texas (No. 4:23-cv-01110) <a href="https://www.aha.org/system/files/media/file/2024/06/opinion-order-in-aha-et-al-v-xavier-becerra-et-al-6-20-2024.pdf" target="_blank" rel="noopener">declared that piece unlawful</a> as beyond HHS's authority under HIPAA. The opinion calls it the "Proscribed Combination." The court denied a permanent injunction but ordered vacatur. HHS <a href="https://www.aha.org/news/headline/2024-08-29-hhs-will-not-appeal-aha-court-victory-online-tracking-case" target="_blank" rel="noopener">withdrew its appeal</a> in August 2024, so the ruling stands.</p>
+    <p>A footnote in the opinion says the vacatur should not be read to limit the rest of the HHS document.</p>
+    <p><b>Vacated:</b> an IP address plus a visit to a public condition or provider page, by itself, as a HIPAA trigger.</p>
+    <p><b>Left in place:</b> portals, appointment and symptom forms, credentials or registration details entered on login and registration pages, the BAA requirement, the cookie banner point and the breach presumption.</p>
+    <p><b>The ruling narrowed the guidance. It did not clear the pixel.</b> The conversion events a treatment center cares about most (form submissions, insurance checks and booking flows) sit on the side the court left alone.</p>
+    <p>The bulletin itself is guidance, and HHS says it does not carry the force of law. The HIPAA rules underneath it do.</p>
+
+    <h2>Does the FTC regulate health data that HIPAA does not cover?</h2>
+    <p>Yes. The FTC Act bars deceptive and unfair practices, including broken privacy promises. The FTC's <a href="https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-finalizes-changes-health-breach-notification-rule" target="_blank" rel="noopener">Health Breach Notification Rule</a> covers health apps and similar services outside HIPAA, and its April 2024 amendments confirm that an unauthorized disclosure counts as a breach, not only a hack.</p>
+    <p>The enforcement record reads like a list of marketing defaults:</p>
+    <ul>
+      <li><a href="https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising" target="_blank" rel="noopener">GoodRx, February 2023</a>: the first enforcement action under the Health Breach Notification Rule, with a $1.5 million civil penalty, after the FTC alleged the company shared health data with Facebook, Google and others and failed to report it.</li>
+      <li><a href="https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-ban-betterhelp-revealing-consumers-data-including-sensitive-mental-health-information-facebook" target="_blank" rel="noopener">BetterHelp, March 2023</a>: $7.8 million for consumers after the FTC alleged the online counseling service shared email addresses, IP addresses and health questionnaire information with Facebook, Snapchat, Criteo and Pinterest.</li>
+      <li><a href="https://www.ftc.gov/news-events/news/press-releases/2024/04/proposed-ftc-order-will-prohibit-telehealth-firm-cerebral-using-or-disclosing-sensitive-data" target="_blank" rel="noopener">Cerebral, April 2024</a>: a settlement requiring more than $7 million in payments, after the FTC alleged the telehealth firm sent sensitive data on nearly 3.2 million consumers to LinkedIn, Snapchat and TikTok through tracking tools.</li>
+      <li><a href="https://www.ftc.gov/news-events/news/press-releases/2024/04/alcohol-addiction-treatment-firm-will-be-banned-disclosing-health-data-advertising-settle-ftc" target="_blank" rel="noopener">An online alcohol addiction treatment company, April 2024</a>: a court order, entered in June 2024, banning it from sharing health data for advertising, plus a $2.5 million civil penalty under the Opioid Addiction Recovery Fraud Prevention Act, suspended because the company could not pay.</li>
+    </ul>
+    <p>The last case holds the detail worth remembering. According to the FTC, the company named its pixel events things like "Paid: Weekly Therapy" and sent them to ad platforms with email and IP addresses attached. The event name was the leak, and it is an easy one to miss because event names look like analytics housekeeping rather than patient data.</p>
+    <p>The statute in that case matters to addiction programs in particular. The Opioid Addiction Recovery Fraud Prevention Act applies specifically to substance use disorder treatment services.</p>
+
+    <h2>Does 42 CFR Part 2 apply to an addiction treatment website?</h2>
+    <p>It can apply to what the website collects, and in several respects it is stricter than HIPAA. Part 2 protects records of the <a href="https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html" target="_blank" rel="noopener">identity, diagnosis, prognosis or treatment</a> of patients in federally assisted substance use disorder programs. Its <a href="https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-B/section-2.11" target="_blank" rel="noopener">definition of patient</a> includes anyone who has applied for diagnosis, treatment or referral. A person does not have to be admitted to fall inside that definition.</p>
+    <p>Part 2 also limits <a href="https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-B/section-2.13" target="_blank" rel="noopener">acknowledging that an identified person is a patient</a> at a facility publicly identified as providing only substance use disorder services. That takes written consent or a court order.</p>
+    <p>A February 2024 final rule aligned Part 2 breach notification and penalties with HIPAA. Compliance was required by February 16, 2026.</p>
+    <p>We found no federal guidance that applies Part 2 to website pixels specifically. The risk is still plain. A pixel that tells an ad platform an identifiable person submitted an intake form on a substance use disorder program's site is close to identifying an applicant. As a precaution, treat intake data as Part 2 data.</p>
+
+    <h2>Which state laws cover health data from websites?</h2>
+    <p>Washington's My Health My Data Act is the broadest. Under <a href="https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true" target="_blank" rel="noopener">RCW 19.373</a>, a covered business needs consent to collect consumer health data and a separate consent to share it. The law also bars using a geofence of 2,000 feet or less around a place that provides in-person health care to track visitors, collect their health data or send them ads. Violations are enforced through Washington's Consumer Protection Act, and the <a href="https://www.atg.wa.gov/protecting-washingtonians-personal-health-data-and-privacy" target="_blank" rel="noopener">state Attorney General</a> notes that consumers can sue. Most provisions took effect March 31, 2024 (June 30, 2024 for small businesses), and the geofence ban took effect July 23, 2023.</p>
+    <p>Data that is already PHI under HIPAA is exempt. Website data that is not PHI may not be.</p>
+    <p>Nevada added its own consumer health data provisions in 2023, now in <a href="https://www.leg.state.nv.us/NRS/NRS-603A.html" target="_blank" rel="noopener">NRS Chapter 603A</a>. If you advertise across state lines, check the law of every state you target, not only the state where you are licensed.</p>
+
+    <h2>Have hospitals been sued over the Meta Pixel?</h2>
+    <p>Yes, and a wave of suits followed the reporting. In June 2022, The Markup <a href="https://themarkup.org/pixel-hunt/2022/06/16/facebook-is-receiving-sensitive-medical-information-from-hospital-websites" target="_blank" rel="noopener">tested the websites of Newsweek's top 100 hospitals</a>. On 33 of them, the Meta Pixel sent data to Facebook when a visitor clicked to schedule an appointment. It also found the pixel inside the password-protected patient portals of seven health systems.</p>
+    <p>By September 2022, <a href="https://themarkup.org/pixel-hunt/2022/09/19/meta-faces-mounting-questions-from-congress-on-health-data-privacy-as-hospitals-remove-facebook-tracker" target="_blank" rel="noopener">at least five class actions</a> had been filed against Meta, one alleging the pixel collected patient information from at least 664 hospital websites. The federal cases against Meta proceed as <a href="https://www.courtlistener.com/docket/63392738/in-re-meta-pixel-healthcare-litigation/" target="_blank" rel="noopener">In re Meta Pixel Healthcare Litigation</a>, No. 3:22-cv-03580 (N.D. Cal.).</p>
+    <p>Behavioral health was not spared. In June 2023, The Markup found that <a href="https://themarkup.org/pixel-hunt/2023/06/13/suicide-hotlines-promise-anonymity-dozens-of-their-websites-send-sensitive-data-to-facebook" target="_blank" rel="noopener">more than 30 of 186 local crisis center websites</a> in the 988 network sent visitor data to Facebook, including clicks on crisis call and text buttons.</p>
+
+    <h2>Where do tracking leaks happen on a behavioral health website?</h2>
+    <p>They happen wherever a visitor tells you something about their own care:</p>
+    <ul>
+      <li><b>Contact and intake forms.</b> Some pixel settings capture form values or hashed email addresses automatically.</li>
+      <li><b>Insurance verification forms.</b> Payer, member ID and date of birth, often on a page whose URL names the program.</li>
+      <li><b>Chat widgets.</b> The transcript lives on the vendor's servers, along with whatever the person typed.</li>
+      <li><b>Call tracking.</b> Dynamic numbers tie a call to the ad, keyword and page. Recordings raise the same question as chat.</li>
+      <li><b>Thank-you page URLs.</b> A URL like <code>/thank-you?program=detox&amp;payer=aetna</code> goes to every tag that fires on that page.</li>
+      <li><b>Session replay.</b> OCR describes these scripts as recording mouse movements, clicks and typing.</li>
+      <li><b>Event names and page titles.</b> "Detox intake submitted" is a disclosure. "Form submitted" is not.</li>
+      <li><b>Tag managers.</b> One container lets anyone with access add a new tag to every page without a developer review.</li>
+    </ul>
+
+    <h2>What does a safer tracking setup look like?</h2>
+    <p>Start by keeping third-party ad pixels off condition, program, intake, insurance, booking and thank-you pages. If you cannot control where a pixel fires, remove it.</p>
+    <p>Analytics is the harder call. Google says it <a href="https://support.google.com/analytics/answer/13297105?hl=en" target="_blank" rel="noopener">does not offer BAAs for Google Analytics</a> and that HIPAA-regulated customers may only use it on pages that are not HIPAA-covered. The usual alternatives are server-side measurement or a privacy-focused tool that reports counts, not people.</p>
+    <p>Form processors, chat, call tracking, scheduling and email delivery can all end up holding PHI. Each one that does needs a signed BAA, and a vendor that will not sign does not get PHI.</p>
+    <p>Then check what actually fires, using the Network tab test described in the FAQ below. Add linkedin and any other vendor you use to the filter.</p>
+    <p>Your ad platforms will report fewer conversions, and their automated bidding will have less to learn from. Count admissions in your own systems instead. A detox page that converts a little less measurably is a business problem. A detox page that tells an ad platform who needs detox is a legal one.</p>
+
+    <h2>What belongs on a tracking checklist for a treatment or therapy website?</h2>
+    <ul>
+      <li>Inventory every script, pixel and tag on the site, including anything inside a tag manager.</li>
+      <li>Remove ad pixels from condition, program, intake, insurance, booking, portal and thank-you pages.</li>
+      <li>Strip program names, payers and conditions from URLs and query strings.</li>
+      <li>Rename events so they describe an action, not a diagnosis.</li>
+      <li>Turn off automatic form capture and session replay on any page with a form.</li>
+      <li>Confirm a signed BAA with each vendor that touches PHI.</li>
+      <li>Check consumer health data laws in every state you advertise in.</li>
+      <li>Test with developer tools after every launch, redesign and new campaign.</li>
+      <li>Have a healthcare privacy attorney review the final setup.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <h3>Is the Meta Pixel HIPAA compliant on a healthcare website?</h3>
+    <p>Not by default. HHS says a vendor that receives protected health information needs a business associate agreement or the patient's HIPAA authorization, and a cookie banner is not an authorization. If a pixel fires on intake, insurance, booking or thank-you pages, assume it may be receiving PHI.</p>
+    <h3>Can a therapy practice use Google Analytics?</h3>
+    <p>Only with care. Google says it does not offer business associate agreements for Google Analytics and that HIPAA-regulated customers may only use it on pages that are not HIPAA-covered. Keep it off forms, booking flows, portals and pages tied to a visitor's own care.</p>
+    <h3>Did the 2024 court ruling make tracking pixels legal for healthcare websites?</h3>
+    <p>No. The court vacated one piece of the HHS guidance: that an IP address plus a visit to a public page about a condition or provider is enough to trigger HIPAA. The rest of the guidance, including portals, appointment and symptom forms, and business associate agreements, was left in place.</p>
+    <h3>Does 42 CFR Part 2 apply to an addiction treatment website?</h3>
+    <p>It can apply to the records the site collects. Part 2 protects records that identify a patient of a federally assisted substance use disorder program, and its definition of patient includes anyone who has applied for diagnosis, treatment or referral at the program. We found no federal guidance applying Part 2 to pixels specifically, so as a precaution, treat intake data as Part 2 data.</p>
+    <h3>How do I check what my website sends to Meta or Google?</h3>
+    <p>Open the site in a private browser window, open the developer tools Network tab, and filter for facebook, google, tiktok and similar domains. Then fill out your own forms with fake data and read what each request contains.</p>
+
+    <h2>Where to start</h2>
+    <p>Begin with the four pages where a visitor tells you the most: the intake form, the insurance check, the booking flow and the thank-you page that follows them. Run the Network tab test on those pages first. If an ad platform receives anything there, fix that before the next campaign launches. The rest of the checklist can follow.</p>
+
+    <hr>
+    <p><b>Related reading:</b> <a href="/learn/legitscript-certification-addiction-treatment-websites">LegitScript Certification for Addiction Treatment Websites</a> · <a href="/learn/seo-for-medical-practices">SEO for Medical Practices</a> · <a href="/therapist-websites">Therapist Websites</a></p>
+
+    <div class="article-cta">
+      <p><b>Planning a new behavioral health website?</b><br>Tracking decisions belong in the plan, not in a cleanup after launch. We build for a flat fee. No per-lead, per-call or per-admission pricing.</p>
+      <a class="btn btn-primary" href="/behavioral-health-websites">Behavioral Health Websites</a>
+      <a class="btn btn-primary" href="/contact">Get a Quote</a>
+    </div>
+
+  </article>
+</div>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 WebsitesAmerica.com — Built in the USA 🇺🇸</div>
+    <div><a href="/healthcare">Healthcare</a> · <a href="/pricing">Pricing</a> · <a href="/learn/">Learn</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a></div>
+    <div class="footer-specialties">
+      <a href="/behavioral-health-websites">Behavioral Health Websites</a> · <a href="/therapist-websites">Therapist Websites</a> · <a href="/dental-websites">Dental Websites</a> · <a href="/medical-websites">Medical Websites</a> · <a href="/physical-therapy-websites">Physical Therapy Websites</a> · <a href="/occupational-therapy-websites">Occupational Therapy Websites</a> · <a href="/chiropractor-websites">Chiropractor Websites</a>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-quote" href="/contact">Get a Quote</a>
+
+</body>
+</html>

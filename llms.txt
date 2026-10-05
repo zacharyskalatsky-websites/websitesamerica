@@ -15,6 +15,8 @@
 - [Tell us about your project](https://websitesamerica.com/contact): Tell us about your business and get a full proposal within one business day. Website, Google presence, SEO, and analytics — live in about 7 days.
 
 ## Guides
+- [LegitScript Certification and Your Addiction Treatment Website](https://websitesamerica.com/learn/legitscript-certification-addiction-treatment-websites): What LegitScript reviews on an addiction treatment website before Google and Meta will run your ads: standards, fees, timeline, and a pre-application checklist.
+- [Tracking Pixels on Behavioral Health Websites: The HIPAA and Privacy Risk](https://websitesamerica.com/learn/hipaa-tracking-pixels-behavioral-health-websites): Meta Pixel, Google Analytics and HIPAA on treatment and therapy websites: what HHS, the courts and the FTC have said, where data leaks, and a checklist.
 - [Website & SEO guides](https://websitesamerica.com/learn/): Free guides on building business websites and growing with SEO — for small businesses, medical practices, law firms, and more.
 - [Building Website Authority](https://websitesamerica.com/learn/building-website-authority): Authority is why one site ranks and another doesn't. How websites earn it: content depth, topic clusters, backlinks, E-E-A-T signals, and time.
 - [Google Business Profile Optimization](https://websitesamerica.com/learn/google-business-profile-optimization): Your Google Business Profile usually shows above your website in local search. The full checklist: categories, services, photos, posts, reviews, Q&A.
