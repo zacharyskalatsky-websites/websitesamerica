@@ -1,10 +1,10 @@
 # Security headers served by Cloudflare Pages on every response (ZV1 Security Standard §13).
 # CSP notes:
 # - No inline scripts on the site: all JS lives in /js/ and analytics loads from analytics.ahrefs.com.
-# - style-src allows 'unsafe-inline' for the small number of style="" attributes and Google Fonts CSS.
+# - style-src allows 'unsafe-inline' for the small number of style="" attributes. Fonts are self-hosted in /assets/fonts/.
 # - connect-src covers the Web3Forms contact-form POST and the Ahrefs analytics beacon.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://analytics.ahrefs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://analytics.ahrefs.com; connect-src 'self' https://api.web3forms.com https://analytics.ahrefs.com; form-action 'self' https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://analytics.ahrefs.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://analytics.ahrefs.com; connect-src 'self' https://api.web3forms.com https://analytics.ahrefs.com; form-action 'self' https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
