@@ -37,6 +37,8 @@ body {
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; }
+h2, h3 { line-height: 1.25; }
+h1, h2 { text-wrap: balance; }
 
 /* Header */
 header {
@@ -190,16 +192,6 @@ a.chip:hover { background: #eef1f9; }
 }
 .note-banner p { font-size: 1.05rem; }
 
-/* Process steps */
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
-.step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 26px; box-shadow: var(--shadow); }
-.step .num {
-  width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: #fff;
-  display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 600; margin-bottom: 14px;
-}
-.step h3 { font-size: 1.08rem; margin-bottom: 6px; }
-.step p { color: var(--muted); font-size: .92rem; }
-
 /* CTA band */
 .cta-band {
   background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
@@ -324,3 +316,83 @@ footer a:hover { color: #fff; }
 .faq summary::after { content: "+"; position: absolute; right: 2px; top: 50%; transform: translateY(-50%); color: var(--red); font-size: 1.3rem; font-weight: 700; }
 .faq details[open] summary::after { content: "–"; }
 .faq details p { color: var(--muted); padding-bottom: 18px; font-size: .97rem; }
+
+/* ---- ZV1 graphics kit (2026-10-21) ----
+   Kit tokens mapped onto the Refined American palette. Accent = brand blue; navy stays the ink of record. */
+:root {
+  --accent: var(--blue); --accent-soft: #eef1f9; --accent-ink: var(--blue-dark); --on-accent: #fff;
+  --ink-strong: var(--navy); --surface: var(--card); --paper: var(--bg); --line-strong: #b9b2a3;
+  --g-accent: var(--blue); --g-accent-soft: #eef1f9; --g-paper: var(--bg);
+}
+.g-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.g-ic { width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* Home hero with illustration beside the H1 (copy, art, actions stack in that order on phones) */
+.g-hero { display: grid; gap: 28px; align-items: center; grid-template-areas: "copy" "art" "actions"; }
+.g-hero__copy { grid-area: copy; }
+.g-hero__art { grid-area: art; line-height: 0; max-width: 500px; width: 100%; margin: 0 auto; }
+.g-hero__art svg { width: 100%; height: auto; display: block; }
+.g-hero__actions { grid-area: actions; }
+.hero .g-hero { --g-accent: #93b2f5; --g-paper: transparent; }
+.hero-note { margin-top: 16px; font-weight: 600; }
+.hero-note a { color: #93b2f5; }
+.hero-note a:hover { color: #fff; }
+@media (min-width: 900px) {
+  .hero { text-align: left; }
+  .g-hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "copy art" "actions art"; column-gap: 48px; row-gap: 0; }
+  .g-hero__copy { align-self: end; }
+  .g-hero__actions { align-self: start; }
+  .hero .g-hero p.sub { margin-left: 0; }
+  .hero .g-hero .hero-ctas { justify-content: flex-start; }
+}
+
+/* Icon feature row */
+.g-features { display: grid; gap: 16px; list-style: none; margin: 0; padding: 0; }
+@media (min-width: 640px) { .g-features { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .g-features { grid-template-columns: repeat(var(--g-cols, 4), 1fr); } }
+.g-features--trio { --g-cols: 3; }
+@media (min-width: 640px) and (max-width: 1023px) { .g-features--trio { grid-template-columns: 1fr; } }
+.g-feature { display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.g-feature__badge { flex: none; width: 44px; height: 44px; border-radius: 11px; background: var(--accent-soft); color: var(--blue); display: grid; place-items: center; }
+.g-feature h3, .g-feature strong { display: block; font-size: 1.05rem; line-height: 1.3; margin: 0 0 6px; color: var(--navy); }
+.g-feature p { margin: 0; font-size: .93rem; line-height: 1.55; color: var(--muted); }
+.g-feature a { color: var(--blue); font-weight: 600; }
+.g-features--compact { --g-cols: 2; }
+.g-features--compact .g-feature { padding: 12px 16px; align-items: center; }
+.g-features--compact .g-feature__badge { width: 36px; height: 36px; border-radius: 9px; }
+.g-features--compact .g-feature .g-ic { width: 1.2rem; height: 1.2rem; }
+.g-features--compact strong { font-family: inherit; font-size: .95rem; font-weight: 600; margin: 0; color: var(--ink); }
+.g-band { margin-top: 44px; }
+
+/* Numbered steps with a connecting rail (replaces the old .steps cards) */
+.g-steps { list-style: none; margin: 0; padding: 0; counter-reset: gstep; display: grid; gap: 26px; }
+@media (min-width: 768px) { .g-steps { grid-template-columns: repeat(var(--g-cols, 4), 1fr); gap: 24px; } }
+.g-step { position: relative; counter-increment: gstep; }
+.g-step::before {
+  content: counter(gstep); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px;
+  background: var(--navy); color: #fff; font-family: var(--serif); font-weight: 600; font-size: 1rem;
+  margin-bottom: 14px; position: relative; z-index: 1;
+}
+@media (min-width: 768px) {
+  .g-step:not(:last-child)::after { content: ""; position: absolute; left: 48px; right: -20px; top: 20px; border-top: 2px dashed var(--line-strong); opacity: .7; }
+}
+.g-step h3 { font-size: 1.08rem; margin: 0 0 6px; color: var(--navy); }
+.g-step p { margin: 0; font-size: .93rem; line-height: 1.55; color: var(--muted); }
+
+/* Specialty chips carry one small icon each */
+.chip .g-ic { width: 1.05rem; height: 1.05rem; vertical-align: -3px; margin-right: 7px; color: var(--blue); }
+span.chip .g-ic { color: var(--muted); }
+.g-band .g-feature { background: var(--accent-soft); border-color: #dbe2f3; }
+.g-band .g-feature__badge { background: #fff; }
+
+/* Phone fix-ups (2026-10-21): header CTA no longer wraps, hero tighter, stats in a 2x2 grid */
+.nav .btn { white-space: nowrap; }
+@media (max-width: 640px) {
+  .logo { font-size: 1.12rem; }
+  .nav .btn { padding: 8px 14px; font-size: .85rem; }
+  .hero { padding: 64px 0 72px; }
+  .g-hero { gap: 22px; }
+  .g-hero__art { max-width: 280px; }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 16px; margin-top: 40px; }
+  .includes-panel { padding: 24px 16px; }
+}
