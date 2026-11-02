@@ -1,0 +1,6 @@
+# Internal repo files must not be publicly served (ZV1 Security Standard). Status 404 keeps them out of the index and out of view.
+/CLAUDE.md /404.html 404
+/SECURITY.md /404.html 404
+/README.md /404.html 404
+/.gitignore /404.html 404
+/.claude/* /404.html 404
