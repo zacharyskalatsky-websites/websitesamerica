@@ -1,7 +1,8 @@
 # Internal repo files must not be publicly served (ZV1 Security Standard).
-# Cloudflare Pages ignores a 404 status in _redirects, so each rule rewrites (200) to a path that does not exist, which returns the real 404 page.
-/CLAUDE.md /no-such-page 200
-/SECURITY.md /no-such-page 200
-/README.md /no-such-page 200
-/.gitignore /no-such-page 200
-/.claude/* /no-such-page 200
+# Cloudflare Pages ignores a 404 status here and never rewrites over an existing file, but a redirect does win.
+# Each rule redirects to a path that does not exist, so the visitor ends on the real 404 page (noindex).
+/CLAUDE.md /no-such-page 302
+/SECURITY.md /no-such-page 302
+/README.md /no-such-page 302
+/.gitignore /no-such-page 302
+/.claude/* /no-such-page 302
