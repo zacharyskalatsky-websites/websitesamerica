@@ -83,7 +83,8 @@ header::before {
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
 .floating-quote:hover { background: var(--navy-2); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(12,26,51,.4); }
-@media (max-width: 640px) { .floating-quote { bottom: 16px; right: 16px; padding: 12px 20px; font-size: .92rem; } }
+/* On phones the sticky header already carries Get a Quote; the floating pill covered the hero CTA at 375 px. */
+@media (max-width: 640px) { .floating-quote { display: none; } }
 
 /* Hero (home) */
 .hero {
